@@ -2,8 +2,8 @@ import newsApiService from './apiService';
 import imgCards from '../src/templates/image-card.hbs';
 import loadMoreBtn from './btnLoadMore';
 
-const newFetchApi = new FetchApi();
-const newBtn = new LoadMoreBtn();
+const newFetchApi = new newsApiService();
+const newBtn = new loadMoreBtn();
 const searchEl = document.querySelector('.search-form');
 const btnSearch = document.querySelector('.btn-search');
 const galleryEl = document.querySelector('.gallery');
