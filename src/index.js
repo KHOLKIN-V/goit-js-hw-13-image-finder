@@ -34,6 +34,6 @@ function loadMore(e) {
 
     newFetchApi.fetchSearchImages().then(i => {
         const cardImages = imgCards(i.hits);
-        galleryEl.insertAdjacentElement('beforeend', cardImages);
+        galleryEl.insertAdjacentHTML('beforeend', cardImages);
     });
 };
