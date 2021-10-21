@@ -23,7 +23,7 @@ function onFoundImages (e) {
             btnLoadMore.hide();
             return;
         };
-        const cardImages = gallery(i.hits);
+        const cardImages = imgCards(i.hits);
         galleryEl.innerHTML = cardImages;
         btnLoadMore.show();
     });
@@ -33,7 +33,7 @@ function loadMore(e) {
     e.preventDefault();
 
     newFetchApi.fetchSearchImages().then(i => {
-        const cardImages = gallery(images.hits);
+        const cardImages = imgCards(i.hits);
         galleryEl.insertAdjacentElement('beforeend', cardImages);
     });
 };
